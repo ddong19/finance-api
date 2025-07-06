@@ -11,8 +11,10 @@ app.get('/', (req, res) => {
 });
 
 const dropdownRoutes = require('./routes/dropdowns');
+const categoriesRoutes = require('./routes/categories');
 
 app.use('/api', dropdownRoutes);
+app.use('/api', categoriesRoutes);
 
 const PORT = 3001;
 app.listen(PORT, () => {
