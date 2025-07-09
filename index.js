@@ -12,9 +12,11 @@ app.get('/', (req, res) => {
 
 const dropdownRoutes = require('./routes/dropdowns');
 const categoriesRoutes = require('./routes/categories');
+const transactionRoutes = require('./routes/transactions');
 
 app.use('/api', dropdownRoutes);
 app.use('/api', categoriesRoutes);
+app.use('/api', transactionRoutes)
 
 const PORT = 3001;
 app.listen(PORT, () => {
